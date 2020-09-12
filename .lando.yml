@@ -1,0 +1,6 @@
+name: migration-dashboard
+recipe: pantheon
+config:
+  framework: drupal8
+  site: migration-dashboard
+  id: 262ade25-09e8-46df-b9e9-204ba2bb5105
