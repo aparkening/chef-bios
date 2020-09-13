@@ -1,0 +1,5 @@
+# Include React app assets compiled by a JavaScript toolchain.
+react_app:
+  version: 16.x
+  js:
+    js/dist/main.min.js: {minified: true}

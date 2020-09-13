@@ -1,0 +1,7 @@
+block_example.description:
+  path: '/examples/block-example'
+  defaults:
+    _controller: '\Drupal\migration_dashboard\Controller\DashboardController::dash'
+    _title: 'Run Dashboard with React'
+  requirements:
+    _permission: 'access content'
