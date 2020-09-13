@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains migration_dashboard.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function migration_dashboard_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the migration_dashboard module.
+    case 'help.page.migration_dashboard':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Migration Dashboard') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function migration_dashboard_theme() {
+  return [
+    'migration_dashboard' => [
+      'render element' => 'children',
+    ],
+  ];
+}
