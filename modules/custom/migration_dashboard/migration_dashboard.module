@@ -26,10 +26,24 @@ function migration_dashboard_help($route_name, RouteMatchInterface $route_match)
 /**
  * Implements hook_theme().
  */
-function migration_dashboard_theme() {
+function migration_dashboard_theme($theme) {
   return [
     'migration_dashboard' => [
       'render element' => 'children',
     ],
   ];
 }
+
+/**
+ * Implements hook_page_attachments_alter().
+ *
+ * This is taken from the awesome setup by Sam Mortenson:
+ * @link https://thinkshout.com/blog/2019/10/adding-webpack-to-a-traditional-drupal-theme/
+ */
+// function migration_dashboard_page_attachments_alter(array &$attachments) {
+//   // Use the dev library if we're developing locally.
+//   if (in_array('migration_dashboard/dashboard', $attachments['#attached']['library']) && file_exists(__DIR__ . '/js')) {
+//     $index = array_search('migration_dashboard/dashboard', $attachments['#attached']['library']);
+//     // $attachments['#attached']['library'][$index] = 'migration_dashboard/react_app_dev';
+//   }
+// }

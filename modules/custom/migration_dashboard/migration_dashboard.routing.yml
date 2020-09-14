@@ -1,7 +1,7 @@
 block_example.description:
   path: '/admin/content/migration-dashboard'
   defaults:
-    _controller: '\Drupal\migration_dashboard\Controller\DashboardController::dash'
-    _title: 'Run Dashboard with React'
+    _controller: '\Drupal\migration_dashboard\Controller\DashboardController::content'
+    _title: 'React Migration Dashboard'
   requirements:
     _permission: 'access content'
