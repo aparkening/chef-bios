@@ -38,7 +38,10 @@ function migration_dashboard_theme($theme) {
  * Implements hook_page_attachments().
  */
 function migration_dashboard_page_attachments(array &$attachments) {
-  $attachments['#attached']['library'][] = 'migration_dashboard/react_app';
+  $current_path = \Drupal::service('path.current')->getPath();
+  if($current_path == '/admin/content/migration-dashboard') {
+    $attachments['#attached']['library'][] = 'migration_dashboard/react_app';
+  }
 }
 
 /**
