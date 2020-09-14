@@ -1,4 +1,8 @@
 # Include React app assets compiled by a JavaScript toolchain.
-migration_dashboard:
+react_app:
   js:
-    js/dashboard.js: {minified: true}
+    js/runtime-main.66f1406e.js: {minified: true}
+    js/2.ead65dd0.chunk.js: {minified: true}
+    js/main.f7f261f1.chunk.js: {minified: true}
+  css:
+    css/main.bc98c85f.chunk.css: {minified: true}

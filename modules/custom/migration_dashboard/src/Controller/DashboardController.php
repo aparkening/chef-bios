@@ -11,10 +11,10 @@ class DashboardController extends ControllerBase {
   public function content() {
 
     // Set reactDiv
-    $reactDiv = '<div id="react-app">React app will load here.</div>';
+    $reactDiv = '<div id="root">React code goes here.</div>';
 
     return [
-      '#theme' => 'migration_dashboard_theme',      
+      '#theme' => 'migration_dashboard_theme',    
       '#markup' => $reactDiv,
     ];
     

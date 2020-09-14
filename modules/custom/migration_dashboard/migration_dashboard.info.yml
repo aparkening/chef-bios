@@ -7,5 +7,5 @@ package: 'Custom'
 dependencies:
   - drupal:node
   - drupal:jsonapi
-# libraries:
-#   - migration_dashboard/react_app
+libraries:
+  - migration_dashboard/react_app

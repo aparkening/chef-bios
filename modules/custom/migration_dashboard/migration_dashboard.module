@@ -35,6 +35,13 @@ function migration_dashboard_theme($theme) {
 }
 
 /**
+ * Implements hook_page_attachments().
+ */
+function migration_dashboard_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'migration_dashboard/react_app';
+}
+
+/**
  * Implements hook_page_attachments_alter().
  *
  * This is taken from the awesome setup by Sam Mortenson:
