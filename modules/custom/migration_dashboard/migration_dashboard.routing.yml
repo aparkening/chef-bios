@@ -4,4 +4,4 @@ block_example.description:
     _controller: '\Drupal\migration_dashboard\Controller\DashboardController::content'
     _title: 'React Migration Dashboard'
   requirements:
-    _permission: 'access content'
+    _permission: 'edit any bio content'
