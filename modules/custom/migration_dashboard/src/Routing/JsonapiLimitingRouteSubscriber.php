@@ -38,9 +38,8 @@ class JsonapiLimitingRouteSubscriber extends RouteSubscriberBase {
    */
   public function mutableResourceTypes(): array {
     return [
-      'node--article' => TRUE,
-      'node--document' => TRUE,
-      'custom_entity--custom_entity' => TRUE,
+      'node--bio' => TRUE,
+      'file--file' => TRUE,
     ];
   }
 
