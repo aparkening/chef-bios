@@ -50,6 +50,9 @@ function migration_dashboard_page_attachments(array &$attachments) {
  *
  * This is taken from the awesome setup by Sam Mortenson:
  * @link https://thinkshout.com/blog/2019/10/adding-webpack-to-a-traditional-drupal-theme/
+ * 
+ * 
+ * Uncomment to merge node.js dev environment locally
  */
 // function migration_dashboard_page_attachments_alter(array &$attachments) {
 //   // Use the dev library if we're developing locally.

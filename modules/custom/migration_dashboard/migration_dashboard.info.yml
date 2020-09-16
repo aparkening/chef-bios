@@ -2,10 +2,10 @@ name: 'migration-dashboard'
 type: module
 description: 'React migration dashboard'
 core: 8.x
-# core_version_requirement: ^8 || ^9
 package: 'Custom'
 dependencies:
   - drupal:node
   - drupal:jsonapi
+  - jsonapi_extras
 libraries:
   - migration_dashboard/react_app

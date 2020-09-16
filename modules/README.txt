@@ -1,42 +1,40 @@
-Modules extend your site functionality beyond Drupal core.
+ABOUT MIGRATION DASHBOARD
+-------------------------
 
-WHAT TO PLACE IN THIS DIRECTORY?
---------------------------------
+Migration Dashboard is a React-based proof-of-concept tool to help authors track content status amidst a large editorial migration project. This isn't intended to be a permanent addition to a site, but rather an assistant for the duration of the internal project.
 
-Placing downloaded and custom modules in this directory separates downloaded and
-custom modules from Drupal core's modules. This allows Drupal core to be updated
-without overwriting these files.
+The module currently only works for Bio content types with specific fields. If that content exists, simply navigate to admin/content/migration-dashboard to interact with the data.
 
-DOWNLOAD ADDITIONAL MODULES
----------------------------
 
-Contributed modules from the Drupal community may be downloaded at
-https://www.drupal.org/project/project_module.
+Features:
+---------
+- Initial state is populated by a JSON fetch
+- Moving an item updates state and patches the bio entity on the server
+- Items fade in and out when moved
+- An alert component displays for 5 seconds if patch fails
+- AirBnB-based linting configuration: https://github.com/airbnb/javascript/tree/master/react
 
-ORGANIZING MODULES IN THIS DIRECTORY
-------------------------------------
 
-You may create subdirectories in this directory, to organize your added modules,
-without breaking the site. Some common subdirectories include "contrib" for
-contributed modules, and "custom" for custom modules. Note that if you move a
-module to a subdirectory after it has been enabled, you may need to clear the
-Drupal cache so it can be found.
+Module Security Features:
+-------------------------
+- Dashboard route is restricted to anyone who can edit Bio content in .routing.yml.
+- GET and PATCH are the only available routes. DELETE and POST routes have been disabled in a routing subscription service.
+- Bios and File are the only mutable resource types, also through the routing subscription service
 
-There are number of directories that are ignored when looking for modules. These
-are 'src', 'lib', 'vendor', 'assets', 'css', 'files', 'images', 'js', 'misc',
-'templates', 'includes', 'fixtures' and 'Drupal'.
 
-MULTISITE CONFIGURATION
+Dependencies:
+-------------
+- Node, because the dashboard exists to update nodes
+- JSON:API because React consumes JSON from GET and PATCH requests
+- JASON:API Extras because it's handy to obscure the jasonapi path and to disable all resources except node--bio and file--file. Read more at https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module/security-considerations.
+
+
+JavaScript:
+-----------
+The executable JavaScript files are in the custom module's `js` folder. The development React files (which require Node to run) are in `js/dev`.
+
+
+More Development Highlights:
 -----------------------
-
-In multisite configurations, modules found in this directory are available to
-all sites. You may also put modules in the sites/all/modules directory, and the
-versions in sites/all/modules will take precedence over versions of the same
-module that are here. Alternatively, the sites/your_site_name/modules directory
-pattern may be used to restrict modules to a specific site instance.
-
-MORE INFORMATION
-----------------
-
-Refer to the “Developing for Drupal” section of the README.txt in the Drupal
-root directory for further information on extending Drupal with custom modules.
+- DashboardController adds react-app div to twig template
+- JS and CSS files are loaded as library attachments in the module hook_page_attachments() override
