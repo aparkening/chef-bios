@@ -45,3 +45,4 @@ Features To Add:
 - Tests
 - Module administrator-based configuration option to display custom introduction
 - Test Drupal 9 compatibility
+- Dashboard link on Admin Manage menu
