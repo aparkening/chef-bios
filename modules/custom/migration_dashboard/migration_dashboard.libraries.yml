@@ -2,7 +2,8 @@
 react_app:
   js:
     js/runtime-main.66f1406e.js: {minified: true}
-    js/2.34e200d5.chunk.js: {minified: true}
-    js/main.6226cd3c.chunk.js: {minified: true}
+    js/2.d8a21956.chunk.js: {minified: true}
+    js/main.6a970449.chunk.js: {minified: true}
   css:
-    css/main.bc98c85f.chunk.css: {minified: true}
+    theme:
+      css/fade.css: {minified: true}

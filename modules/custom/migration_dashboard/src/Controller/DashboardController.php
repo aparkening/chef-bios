@@ -8,7 +8,6 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 // use Symfony\Component\HttpFoundation\Response;
 
 class DashboardController extends ControllerBase {
-// class DashboardController {
 
   public function content() {
 
@@ -16,17 +15,9 @@ class DashboardController extends ControllerBase {
     $reactDiv = '<div id="react-app">React code goes here.</div>';
 
     return [
-      '#theme' => 'migration_dashboard_theme',    
-      '#markup' => $reactDiv,
-    ];
-    
+      '#theme' => 'migration_dashboard',    
+      // '#markup' => $reactDiv,
+      '#react_div' => $this->t($reactDiv)
+    ]; 
   }
-
-
-  // public function dash() {
-  //   $shout = 'Testing nope';
-        
-  //   return new Response($shout);
-  // }
-
 }

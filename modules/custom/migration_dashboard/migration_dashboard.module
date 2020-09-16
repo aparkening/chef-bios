@@ -26,10 +26,11 @@ function migration_dashboard_help($route_name, RouteMatchInterface $route_match)
 /**
  * Implements hook_theme().
  */
-function migration_dashboard_theme($theme) {
+function migration_dashboard_theme($existing, $type, $theme, $path) {
   return [
     'migration_dashboard' => [
-      'render element' => 'children',
+      // 'render element' => 'children',
+      'variables' => ['react_div' => NULL]
     ],
   ];
 }
