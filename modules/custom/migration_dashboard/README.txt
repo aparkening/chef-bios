@@ -35,6 +35,13 @@ The executable JavaScript files are in the custom module's `js` folder. The deve
 
 
 More Development Highlights:
------------------------
+----------------------------
 - DashboardController adds react-app div to twig template
 - JS and CSS files are loaded as library attachments in the module hook_page_attachments() override
+
+
+Features To Add:
+----------------
+- Tests
+- Module administrator-based configuration option to display custom introduction
+- Test Drupal 9 compatibility
