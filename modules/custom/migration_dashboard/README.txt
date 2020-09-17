@@ -1,18 +1,21 @@
 ABOUT MIGRATION DASHBOARD
 -------------------------
 
-Migration Dashboard is a React-based proof-of-concept tool to help authors track content status amidst a large editorial migration project. This isn't intended to be a permanent addition to a site, but rather an assistant for the duration of the internal project.
+The Migration Dashboard Drupal module is a proof-of-concept tool to help authors track content status amidst a large editorial migration project. This isn't intended to be a permanent addition to a site, but rather an assistant for the duration of the internal project.
 
-The module currently only works for Bio content types with specific fields. If that content exists, simply navigate to admin/content/migration-dashboard to interact with the data.
+The module currently only works for Bio content types with specific fields. If that content exists, simply navigate to `admin/content/migration-dashboard` in your browser to interact with the data.
 
 
 Features:
 ---------
-- Initial state is populated by a JSON fetch
-- Moving an item updates state and patches the bio entity on the server
-- Items fade in and out when moved
-- An alert component displays for 5 seconds if patch fails
-- AirBnB-based linting configuration: https://github.com/airbnb/javascript/tree/master/react
+- Initial browser state populated by a JSON fetch
+- Moving an item both updates browser state and patches the Drupal bio entity 
+- Patches are somewhat secure through session token
+- An alert displays for 5 seconds if patch fails
+- Items visually fade in and out when moved
+- Minimal styling to take advantage of Drupal administrative theme
+- All CSS bundled in React components for portability
+- React code linted with AirBnB's configuration: https://github.com/airbnb/javascript/tree/master/react
 
 
 Module Security Features:
@@ -37,7 +40,7 @@ The executable JavaScript files are in the custom module's `js` folder. The deve
 More Development Highlights:
 ----------------------------
 - DashboardController adds react-app div to twig template
-- JS and CSS files are loaded as library attachments in the module hook_page_attachments() override
+- JS files are loaded as library attachments in the module hook_page_attachments() override
 
 
 Features To Add:
