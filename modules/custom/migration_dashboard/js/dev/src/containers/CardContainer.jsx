@@ -4,10 +4,30 @@ import styled from 'styled-components';
 import {
   CSSTransition,
   TransitionGroup,
-} from 'react-transition-group';
-import '../App.css';
+} from 'react-transition-group'; 
 import Card from '../components/Card';
 
+const Container = styled.div`
+  margin-top: 3em;
+  //When element enters dom */
+  .fade-enter {
+    opacity: 0;
+  }
+  /* After element enters [transition time] */
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+  /* When state turns false */
+  .fade-exit {
+    opacity: 1;
+  }
+  /* Right after exit [transition time] */
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+  }
+`;
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -71,7 +91,7 @@ function CardContainer(props) {
    * Display Card components with title and count
    */
   return (
-    <div className="list">
+    <Container>
       <h2>
         {title}
         {' '}
@@ -84,7 +104,7 @@ function CardContainer(props) {
           </TransitionGroup>
         ) : (<div>Ready for bios!</div>)}
       </Row>
-    </div>
+    </Container>
   );
 }
 
